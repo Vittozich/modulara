@@ -4,7 +4,7 @@ namespace Vittozich\Modulara;
 
 use Illuminate\Support\ServiceProvider;
 
-class ModularaCoreServiceProvider extends ServiceProvider
+class ModularaServiceProvider extends ServiceProvider
 {
     public function boot()
     {
