@@ -2,7 +2,7 @@
 
 namespace Modulizm\Core;
 
-use Carbon\Laravel\ServiceProvider;
+use Illuminate\Support\ServiceProvider;
 
 class ModulizmCoreServiceProvider extends ServiceProvider
 {
