@@ -9,7 +9,7 @@ class ModulizmCoreServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__ . '/../config/modulizmcore.php' => config_path('modulizmcore.php')
+            __DIR__ . '/../config/modulizm.php' => config_path('modulizm.php')
         ]);
     }
 
