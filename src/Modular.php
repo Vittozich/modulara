@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Modular;
+namespace Modulizm\Core;
 
 use Illuminate\Support\Facades\File;
 
