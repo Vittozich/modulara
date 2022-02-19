@@ -1,15 +1,15 @@
 <?php
 
-namespace Modulizm\Core;
+namespace Vittozich\Modulara;
 
 use Illuminate\Support\ServiceProvider;
 
-class ModulizmCoreServiceProvider extends ServiceProvider
+class ModularaCoreServiceProvider extends ServiceProvider
 {
     public function boot()
     {
         $this->publishes([
-            __DIR__ . '/../config/modulizm.php' => config_path('modulizm.php')
+            __DIR__ . '/../config/modulara.php' => config_path('modulara.php')
         ]);
     }
 

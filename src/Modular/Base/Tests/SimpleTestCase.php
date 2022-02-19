@@ -1,6 +1,6 @@
 <?php
 
-namespace Modulizm\Core\Modular\Base\Tests;
+namespace Vittozich\Modulara\Modular\Base\Tests;
 
 use App\Console\Kernel;
 

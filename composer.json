@@ -1,6 +1,6 @@
 {
-    "name": "modulizm/core",
-    "description": "core of modulizm framework",
+    "name": "vittozich/modulara",
+    "description": "make modules great again",
     "type" : "library",
     "licence" : "MIT",
     "authors": [
@@ -15,13 +15,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Modulizm\\Core\\": "src/"
+            "Vittozich\\Modulara\\": "src/"
         }
     },
     "extra": {
         "laravel" : {
             "providers" : [
-                "Modulizm\\Core\\ModulizmCoreServiceProvider"
+                "Vittozich\\Modulara\\ModularaCoreServiceProvider"
             ]
         }
     }

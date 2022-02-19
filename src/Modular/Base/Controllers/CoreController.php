@@ -1,5 +1,6 @@
 <?php
-namespace Modulizm\Core\Modular\Base\Controllers;
+namespace Vittozich\Modulara\Modular\Base\Controllers;
+
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;

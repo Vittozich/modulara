@@ -1,7 +1,9 @@
 <?php
-namespace Modulizm\Core\Modular\Base\Repositories;
+namespace Vittozich\Modulara\Modular\Base\Repositories;
 
-use Modulizm\Core\Modular\Base\Models\CoreModel;
+namespace Vittozich\Modulara\Modular\Base\Models\CoreModel;
+
+use Vittozich\Modulara\Modular\Base\Models\CoreModel;
 
 abstract class CoreRepository
 {

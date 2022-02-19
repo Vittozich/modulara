@@ -1,5 +1,5 @@
 <?php
-namespace Modulizm\Core\Modular\Base\Controllers;
+namespace Vittozich\Modulara\Modular\Base\Controllers;
 
 class ApiController extends CoreController
 {

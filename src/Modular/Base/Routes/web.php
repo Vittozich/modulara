@@ -1,6 +1,6 @@
 <?php
 
-use Modulizm\Core\Modular;
+use Vittozich\Modulara\Modular;
 
 $modular = app(Modular::class);
 foreach ($modular->getOnlyRoutesPath() as $pathWay):

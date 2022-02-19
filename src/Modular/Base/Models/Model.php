@@ -1,6 +1,6 @@
 <?php
 
-namespace Modulizm\Core\Modular\Base\Models;
+namespace Vittozich\Modulara\Modular\Base\Models;
 
 /**
  * Class Model

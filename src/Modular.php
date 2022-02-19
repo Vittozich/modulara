@@ -1,6 +1,6 @@
 <?php
 
-namespace Modulizm\Core;
+namespace Vittozich\Modulara;
 
 use Illuminate\Support\Facades\File;
 
@@ -10,7 +10,7 @@ class Modular
 
     public function __construct()
     {
-        $this->nesting = config('modulizmcore.nesting_level');
+        $this->nesting = config('modulara.nesting_level');
     }
 
     /**
