@@ -22,6 +22,9 @@ class Modular
      */
     public function getModulesPaths(array $nestingPaths = null): array
     {
+        if (!is_dir(app_path('Modular/Modules')))
+            return [];
+
         if (is_null($nestingPaths))
             return File::directories(app_path('Modular/Modules'));
         return File::directories($nestingPaths);

@@ -5,6 +5,7 @@ namespace Vittozich\Modulara;
 use Illuminate\Support\ServiceProvider;
 use Vittozich\Modulara\Console\PublishBaseModularCommand;
 use Vittozich\Modulara\Console\PublishConfigCommand;
+use Vittozich\Modulara\Providers\ModularaAppServiceProvider;
 
 class ModularaServiceProvider extends ServiceProvider
 {
@@ -20,6 +21,10 @@ class ModularaServiceProvider extends ServiceProvider
 
     public function register()
     {
+        $this->mergeConfigFrom(
+            __DIR__.'/../config/modulara.php', 'modulara'
+        );
 
+        $this->app->register(ModularaAppServiceProvider::class);
     }
 }
