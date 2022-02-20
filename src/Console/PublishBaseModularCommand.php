@@ -85,7 +85,7 @@ class PublishBaseModularCommand extends Command
 
             if (!file_exists($toFile) || $this->option('force')) {
                 $fileContent = file_get_contents($fromFile);
-                $fileContent = str_replace('Vittozich\\Modulara\\', 'App\\', $fileContent);
+                $fileContent = str_replace('Vittozich\\Modulara\\', app()->getNamespace(), $fileContent);
                 file_put_contents($toFile, $fileContent);
             }
         }
