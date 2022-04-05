@@ -63,6 +63,10 @@ class PublishBaseModularCommand extends Command
             ],
             'Dtos' => [
                 'CoreDto.php'
+            ],
+            'Actions' => [
+                'CoreAction.php',
+                'DtoAction.php'
             ]
         ];
 
