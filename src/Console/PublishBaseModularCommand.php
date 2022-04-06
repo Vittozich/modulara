@@ -61,12 +61,12 @@ class PublishBaseModularCommand extends Command
                 'ExistsDbTestCase.php',
                 'SimpleTestCase.php'
             ],
-            'Dtos' => [
-                'CoreDto.php'
+            'DTOs' => [
+                'CoreDTO.php'
             ],
             'Actions' => [
                 'CoreAction.php',
-                'DtoAction.php'
+                'DTOAction.php'
             ]
         ];
 
