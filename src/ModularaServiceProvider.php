@@ -6,7 +6,6 @@ use Illuminate\Support\ServiceProvider;
 use Vittozich\Modulara\Console\PublishBaseModularCommand;
 use Vittozich\Modulara\Console\PublishConfigCommand;
 use Vittozich\Modulara\Providers\ModularaAppServiceProvider;
-use Vittozich\Modulara\Providers\ModularaRouteServiceProvider;
 
 class ModularaServiceProvider extends ServiceProvider
 {
@@ -18,6 +17,8 @@ class ModularaServiceProvider extends ServiceProvider
                 PublishConfigCommand::class
             ]);
         }
+        $this->loadRoutesFrom(__DIR__ . '/Modular/Base/Routes/api.php');
+        $this->loadRoutesFrom(__DIR__ . '/Modular/Base/Routes/web.php');
     }
 
     public function register()
@@ -27,6 +28,5 @@ class ModularaServiceProvider extends ServiceProvider
         );
 
         $this->app->register(ModularaAppServiceProvider::class);
-        $this->app->register(ModularaRouteServiceProvider::class);
     }
 }

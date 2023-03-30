@@ -1,4 +1,5 @@
 <?php
+
 namespace Vittozich\Modulara\Modular\Base\Repositories;
 
 use Vittozich\Modulara\Modular\Base\Models\CoreModel;
@@ -13,11 +14,11 @@ abstract class CoreRepository
     }
 
     /**
-     * Need to determinate model and write inside the method return Model::class`
+     * Need to define model and write inside the method return Model::class`
      *
      * @return mixed
      */
-    abstract protected function getModelClass():string;
+    abstract protected function getModelClass(): string;
 
     protected function startConditions()
     {

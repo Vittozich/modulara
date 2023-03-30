@@ -2,15 +2,15 @@
 
 namespace Vittozich\Modulara;
 
-use Illuminate\Support\Facades\File;
+use Vittozich\Modulara\Helpers\Filesystem;
 
 class Modular
 {
-    protected int $nesting;
+    protected int $nestingLevel;
 
     public function __construct()
     {
-        $this->nesting = config('modulara.nesting_level');
+        $this->nestingLevel = config('modulara.nesting_level');
     }
 
     /**
@@ -22,12 +22,14 @@ class Modular
      */
     public function getModulesPaths(array $nestingPaths = null): array
     {
-        if (!is_dir(app_path('Modular/Modules')))
-            return [];
+        if (is_null($nestingPaths)) {
+            if (is_dir(app_path('Modular/Modules'))) {
+                return Filesystem::directories(app_path('Modular/Modules'));
+            }
+            return Filesystem::directories(__DIR__ . '/Modular/Modules');
+        }
 
-        if (is_null($nestingPaths))
-            return File::directories(app_path('Modular/Modules'));
-        return File::directories($nestingPaths);
+        return Filesystem::directories($nestingPaths);
     }
 
 
@@ -77,17 +79,18 @@ class Modular
         $nestingRoutePaths = [];
         $currentNesting = 1;
 
-        while ($nestingModulePaths != []) {
-            foreach ($nestingModulePaths as $nestingModulePath)
+        while ($nestingModulePaths !== []) {
+            foreach ($nestingModulePaths as $nestingModulePath) {
                 if (basename($nestingModulePath) === $folderName) {
                     $moduleName = basename(pathinfo($nestingModulePath)['dirname']);
                     $nestingRoutePaths[$moduleName] = $nestingModulePath;
                     $currentNesting++;
                 }
+            }
 
-            if ($currentNesting > $this->nesting)
+            if ($currentNesting > $this->nestingLevel) {
                 break;
-
+            }
             $nestingModulePaths = $this->getModulesPaths($nestingModulePaths);
         }
 

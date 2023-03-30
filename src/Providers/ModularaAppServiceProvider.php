@@ -24,7 +24,9 @@ class ModularaAppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        /** @var $modular Modular */
         $modular = app(Modular::class);
+
         $this->loadMigrationsFrom(array_merge(
             [
                 database_path() . DIRECTORY_SEPARATOR . 'migrations'
