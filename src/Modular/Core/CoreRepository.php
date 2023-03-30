@@ -1,8 +1,8 @@
 <?php
 
-namespace Vittozich\Modulara\Modular\Base\Repositories;
+namespace Vittozich\Modulara\Modular\Core;
 
-use Vittozich\Modulara\Modular\Base\Models\CoreModel;
+use Vittozich\Modulara\Modular\Core\CoreModel;
 
 abstract class CoreRepository
 {

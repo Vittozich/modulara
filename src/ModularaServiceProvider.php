@@ -17,8 +17,8 @@ class ModularaServiceProvider extends ServiceProvider
                 PublishConfigCommand::class
             ]);
         }
-        $this->loadRoutesFrom(__DIR__ . '/Modular/Base/Routes/api.php');
-        $this->loadRoutesFrom(__DIR__ . '/Modular/Base/Routes/web.php');
+        $this->loadRoutesFrom(__DIR__ . '/Modular/Core/Routes/api.php');
+        $this->loadRoutesFrom(__DIR__ . '/Modular/Core/Routes/web.php');
     }
 
     public function register()

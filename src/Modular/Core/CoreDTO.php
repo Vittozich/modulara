@@ -1,5 +1,5 @@
 <?php
-namespace Vittozich\Modulara\Modular\Base\DTOs;
+namespace Vittozich\Modulara\Modular\Core;
 
 use Spatie\DataTransferObject\DataTransferObject;
 

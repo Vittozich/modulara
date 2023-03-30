@@ -4,8 +4,9 @@ namespace Vittozich\Modulara\Modular\Base\Tests;
 
 use App\Console\Kernel;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Vittozich\Modulara\Modular\Core\CoreTestCase;
 
-abstract class DbTestCase extends BaseTestCase
+abstract class DbTestCase extends CoreTestCase
 {
     use RefreshDatabase;
 

@@ -1,7 +1,9 @@
 <?php
 namespace Vittozich\Modulara\Modular\Base\Controllers;
 
-class WebController extends CoreController
+use Vittozich\Modulara\Modular\Core\CoreController;
+
+abstract class WebController extends CoreController
 {
-    public $ui = 'web';
+    const UI = 'web';
 }

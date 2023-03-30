@@ -1,7 +1,9 @@
 <?php
 namespace Vittozich\Modulara\Modular\Base\Controllers;
 
-class ApiController extends CoreController
+use Vittozich\Modulara\Modular\Core\CoreController;
+
+abstract class ApiController extends CoreController
 {
-    public $ui = 'api';
+    const UI = 'api';
 }

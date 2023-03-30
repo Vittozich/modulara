@@ -1,5 +1,5 @@
 <?php
-namespace Vittozich\Modulara\Modular\Base\Models;
+namespace Vittozich\Modulara\Modular\Core;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
