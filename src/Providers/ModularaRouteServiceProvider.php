@@ -9,6 +9,7 @@ use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvi
 use Illuminate\Support\Facades\Route;
 use Vittozich\Modulara\Modular;
 
+//todo починить провайдер
 class ModularaRouteServiceProvider extends ServiceProvider
 {
     /**
@@ -29,10 +30,13 @@ class ModularaRouteServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->configureRateLimiting();
+
+        /** @var $modular Modular */
         $modular = app(Modular::class);
 
         $this->routes(function () use ($modular) {
-            foreach ($modular->getOnlyRoutesPath() as $moduleRoutePath) :
+            dd('it doesnt work for now');
+            foreach ($modular->getOnlyRoutesPath() as $moduleRoutePath) {
                 if (file_exists($moduleRoutePath . '/api.php'))
                     Route::prefix('api')
                         ->middleware('api')
@@ -43,7 +47,7 @@ class ModularaRouteServiceProvider extends ServiceProvider
                     Route::middleware('web')
                         ->namespace($this->namespace)
                         ->group($moduleRoutePath . '/web.php');
-            endforeach;
+            }
         });
     }
 

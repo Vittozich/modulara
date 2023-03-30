@@ -1,5 +1,5 @@
 <?php
-namespace Vittozich\Modulara\Modular\Base\Controllers;
+namespace Vittozich\Modulara\Modular\Core;
 
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;

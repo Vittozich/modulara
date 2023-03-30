@@ -1,10 +1,10 @@
 <?php
 
-namespace Vittozich\Modulara\Modular\Base\Tests;
+namespace Vittozich\Modulara\Modular\Core;
 
 use Illuminate\Foundation\Testing\TestCase;
 
-abstract class BaseTestCase extends TestCase
+abstract class CoreTestCase extends TestCase
 {
     public function createApplication()
     {

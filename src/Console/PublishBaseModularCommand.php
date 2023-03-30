@@ -46,15 +46,13 @@ class PublishBaseModularCommand extends Command
         $baseStructure = [
             'Controllers' => [
                 'ApiController.php',
-                'CoreController.php',
                 'WebController.php'
             ],
             'Models' => [
-                'CoreModel.php',
                 'Model.php'
             ],
             'Repositories' => [
-                'CoreRepository.php'
+                'Repository.php'
             ],
             'Tests' => [
                 'DbTestCase.php',
@@ -62,11 +60,11 @@ class PublishBaseModularCommand extends Command
                 'SimpleTestCase.php'
             ],
             'DTOs' => [
-                'CoreDTO.php'
+                'DTO.php'
             ],
             'Actions' => [
-                'CoreAction.php',
-                'DTOAction.php'
+                'DTOAction.php',
+                'SimpleAction.php'
             ]
         ];
 
@@ -83,7 +81,6 @@ class PublishBaseModularCommand extends Command
         $this->info('Modular base structure published complete.');
     }
 
-
     protected function putFileToNewPlace(array $files, $from, $to): void
     {
         foreach ($files as $file) {
@@ -92,10 +89,25 @@ class PublishBaseModularCommand extends Command
 
             if (!file_exists($toFile) || $this->option('force')) {
                 $fileContent = file_get_contents($fromFile);
-                $fileContent = str_replace('Vittozich\\Modulara\\', app()->getNamespace(), $fileContent);
+                $fileContent = $this->changeNamespace($fileContent);
                 file_put_contents($toFile, $fileContent);
             }
         }
+    }
+
+    protected function changeNamespace(string $fileContent, bool $onlyNamespace = true): string
+    {
+        $namespaceString = '';
+
+        if ($onlyNamespace) {
+            $namespaceString = 'namespace ';
+        }
+
+        return str_replace(
+            $namespaceString . 'Vittozich\\Modulara\\',
+            $namespaceString . app()->getNamespace(),
+            $fileContent
+        );
     }
 
 

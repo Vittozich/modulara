@@ -1,6 +1,6 @@
 <?php
 
-namespace Vittozich\Modulara\Modular\Modules\Controllers;
+namespace Vittozich\Modulara\Modular\Modules\TemplateModule\Controllers;
 
 use Vittozich\Modulara\Modular\Base\Controllers\WebController;
 
