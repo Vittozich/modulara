@@ -1,8 +1,8 @@
 {
     "name": "vittozich/modulara",
     "description": "make modules great again",
-    "type" : "library",
-    "licence" : "MIT",
+    "type": "library",
+    "license": "MIT",
     "authors": [
         {
             "name": "Viktor Izotov",
@@ -10,9 +10,9 @@
         }
     ],
     "require": {
-        "php" : "^8.2",
-        "laravel/framework" : "^10",
-        "spatie/data-transfer-object" : "^3.9"
+        "php": "^8.2",
+        "laravel/framework": "^10 || ^11 || ^12",
+        "spatie/data-transfer-object": "^3.9"
     },
     "autoload": {
         "psr-4": {
@@ -20,9 +20,9 @@
         }
     },
     "extra": {
-        "laravel" : {
-            "providers" : [
-              "Vittozich\\Modulara\\ModularaServiceProvider"
+        "laravel": {
+            "providers": [
+                "Vittozich\\Modulara\\ModularaServiceProvider"
             ]
         }
     }
