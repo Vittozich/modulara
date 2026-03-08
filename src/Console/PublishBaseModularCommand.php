@@ -7,21 +7,7 @@ use Illuminate\Filesystem\Filesystem;
 
 class PublishBaseModularCommand extends Command
 {
-    /**
-     * The console command name.
-     *
-     * @var string
-     */
-    protected $name = 'modulara:base';
-
-    /**
-     * The name of the console command.
-     *
-     * This name is used to identify the command during lazy loading.
-     *
-     * @var string|null
-     */
-    protected static $defaultName = 'modulara:base';
+    protected $signature = 'modulara:base {--force : Overwrite existing base files}';
 
     /**
      * The console command description.

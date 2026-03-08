@@ -3,6 +3,7 @@
 namespace Vittozich\Modulara;
 
 use Illuminate\Support\ServiceProvider;
+use Vittozich\Modulara\Console\ClearCacheCommand;
 use Vittozich\Modulara\Console\PublishBaseModularCommand;
 use Vittozich\Modulara\Console\PublishConfigCommand;
 use Vittozich\Modulara\Providers\ModularaAppServiceProvider;
@@ -14,7 +15,8 @@ class ModularaServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             $this->commands([
                 PublishBaseModularCommand::class,
-                PublishConfigCommand::class
+                PublishConfigCommand::class,
+                ClearCacheCommand::class,
             ]);
         }
         $this->loadRoutesFrom(__DIR__ . '/Modular/Core/Routes/api.php');
