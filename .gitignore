@@ -1,0 +1,29 @@
+# Dependencies
+/vendor/
+
+# Environment
+.env
+.env.*
+
+# Logs / caches
+*.log
+.phpunit.result.cache
+.php-cs-fixer.cache
+
+# Test / coverage
+/.phpunit.cache/
+/.coverage
+/coverage/
+
+# IDE / editor
+/.idea/
+/.vscode/
+/.fleet/
+/.zed/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Optional local lock for library development
+/composer.lock
